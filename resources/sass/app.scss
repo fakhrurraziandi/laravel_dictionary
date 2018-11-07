@@ -1,0 +1,60 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+
+$theme-colors: (
+  "color-1": #7F7B82,
+  "color-2": #BFACB5,
+  "color-3": #E5D0CC,
+  "color-4": #444554,
+  "color-5": #172121,
+);
+
+$body-color:                #7a7e82 !default;
+$font-size-base:              	0.875rem !default; // Assumes the browser default, typically `16px`
+$link-color:                #444554 !default;
+
+$headings-color:              #444554 !default;
+$headings-font-weight:        800 !default;
+$link-hover-decoration:     none !default;
+
+@import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome.scss';
+
+.navbar-laravel {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+.section{
+	padding: 100px 0;
+}
+
+.section-banner{
+	// padding: 150px 0;
+	background-image: url("../img/blur-book-stack-books-590493.jpg");
+	background-size: cover;
+	background-position: center center; 
+	position: relative;
+
+	&:before{
+		content: "";
+		background-color: rgba(0, 0, 0, 0.8);
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+.section-banner-mini{
+	padding: 70px 0;
+}
+
