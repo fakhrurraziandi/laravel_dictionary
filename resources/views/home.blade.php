@@ -13,7 +13,7 @@
 						<p class="lead">Kamus Besar Bahasa Indonesia</p>
 					</div>
 
-					<form method="GET" action="{{route('page.search')}}">
+					<form method="GET" action="{{route('page.words')}}">
 
 
 						<div class="form-group">
@@ -23,7 +23,7 @@
 								<input type="text" name="keyword" id="keyword" class="form-control border-0" placeholder="Cari Kata" aria-label="Cari Kata" aria-describedby="button-addon1" value="{{old('keyword', request()->keyword)}}">
 
 								<div class="input-group-append">
-									<button class="btn btn-color-3 border-0" type="submit" id="button-addon1"><i class="fa fa-search"></i></button>
+									<button class="btn btn-primary border-0" type="submit" id="button-addon1"><i class="fa fa-search"></i></button>
 								</div>
 								
 							</div>
@@ -36,11 +36,10 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-12 text-center text-white">
+				<div class="col-md-10 offset-md-1 text-center text-white">
 					<h5 class="mb-4 text-white">Pencarian Populer</h5>
-					<?php $btn_classes = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'] ?>
 					@foreach($words as $word)
-						<a href="{{route('page.word', $word->slug)}}" class="btn btn-{{$btn_classes[rand(0, (count($btn_classes) - 1))]}} btn-sm mb-2">{{$word->name}}</a>
+						<a href="{{route('page.word', $word->slug)}}" class="btn btn-primary btn-sm mb-2">{{$word->name}}</a>
 					@endforeach
 				</div>
 			</div>
@@ -48,6 +47,9 @@
 			
 		</div>
 	</section>
+
+
+	
 
 
 	<section class="section">

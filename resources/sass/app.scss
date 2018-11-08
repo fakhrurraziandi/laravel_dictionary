@@ -1,30 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit:300,400,500,600,700');
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import "~bootstrap-table/src/bootstrap-table.css";
 
 // Variables
-@import 'variables';
+
 
 // Bootstrap
 
-$theme-colors: (
-  "color-1": #7F7B82,
-  "color-2": #BFACB5,
-  "color-3": #E5D0CC,
-  "color-4": #444554,
-  "color-5": #172121,
-);
+@import "~bootstrap/scss/functions";
+@import 'variables';
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
 
-$body-color:                #7a7e82 !default;
-$font-size-base:              	0.875rem !default; // Assumes the browser default, typically `16px`
-$link-color:                #444554 !default;
 
-$headings-color:              #444554 !default;
-$headings-font-weight:        800 !default;
-$link-hover-decoration:     none !default;
+@import "~font-awesome/scss/font-awesome.scss";
+// @import "~select2/src/scss/core.scss";
+// @import "~select2-bootstrap4-theme/src/select2-bootstrap4.scss";
+// @import "~flatpickr/dist/flatpickr.min.css";
 
-@import '~bootstrap/scss/bootstrap';
-@import '~font-awesome/scss/font-awesome.scss';
+body{
+	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/leaves-pattern.png);
+}
+
+
+
+
 
 .navbar-laravel {
 	background-color: #fff;
@@ -57,4 +88,3 @@ $link-hover-decoration:     none !default;
 .section-banner-mini{
 	padding: 70px 0;
 }
-

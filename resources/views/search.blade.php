@@ -9,8 +9,7 @@
 				<div class="col-md-6">
 					
 					<div class="text-white">
-						<h1 class="text-white">KBBI</h1>
-						<p class="lead">Kamus Besar Bahasa Indonesia</p>
+						<p class="lead">Cari Kata</p>
 					</div>
 
 					<form method="GET" action="{{route('page.search')}}">
@@ -23,7 +22,7 @@
 								<input type="text" name="keyword" id="keyword" class="form-control border-0" placeholder="Cari Kata" aria-label="Cari Kata" aria-describedby="button-addon1" value="{{old('keyword', $request->get('keyword'))}}">
 
 								<div class="input-group-append">
-									<button class="btn btn-color-3 border-0" type="submit" id="button-addon1"><i class="fa fa-search"></i></button>
+									<button class="btn btn-primary border-0" type="submit" id="button-addon1"><i class="fa fa-search"></i></button>
 								</div>
 								
 							</div>
@@ -45,7 +44,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-
+					
+					<p class="font-weight-bold mb-4">Hasil Pencarian <i>Makan</i> ...</p>
 					
 					<div class="card mb-4">
 						

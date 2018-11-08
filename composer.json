@@ -10,7 +10,8 @@
         "flynsarmy/csv-seeder": "1.*",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "league/csv": "^9.1"
+        "league/csv": "^9.1",
+        "unisharp/laravel-ckeditor": "^4.7"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

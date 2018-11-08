@@ -23,7 +23,7 @@ class WordsSeeder extends Seeder
        	$query = "INSERT INTO words (name, slug, meaning, hit) VALUES ";
        	$values = [];
 	    foreach($words as $word){
-	    	$values[] = "('". $word['katakunci'] ."', '". str_slug($word['katakunci']) ."', '". $word['artikata'] ."', ". rand(0, 100) .")";
+	    	$values[] = "('". $word['katakunci'] ."', '". str_slug($word['katakunci']) ."', '". $word['artikata'] ."', ". rand(0, 10) .")";
 	    }
 
 	    $query .= implode(', ', $values);

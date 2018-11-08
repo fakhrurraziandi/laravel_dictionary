@@ -54,3 +54,7 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+
+window.slugify = require('slugify');
+require('bootstrap-table');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Word;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -13,22 +14,19 @@ class PagesController extends Controller
     	return view('home', compact('words'));
     }
 
+    public function words(Request $request)
+    {
+    	$words = Word::where('name', 'LIKE', $request->keyword .'%')->paginate(10);
+    	return view('words', compact('request', 'words'));
+    }
+
     public function word($slug)
     {
     	$words = Word::where('slug', $slug)->get();
     	return view('word', compact('words'));
     }
 
-    public function search(Request $request)
-    {
-    	$this->validate($request, [
-    		'keyword' => 'required'
-    	]);
-
-    	$words = Word::where('name', 'LIKE', '%'. $request->get('keyword') .'%')->paginate(5);
-
-    	return view('search', compact('request', 'words'));
-    }
+    
 
 
 }
